@@ -39,7 +39,7 @@ async function seedDatabase() {
     insertRaffle.run(
       'Rifa Solidária - Hospital de Câncer RV',
       'Concorra a prêmios incríveis e ajude o Hospital de Câncer de Rio Verde! Sua participação faz a diferença.',
-      JSON.stringify(['/uploads/raffle1.jpg']),
+      JSON.stringify(['https://via.placeholder.com/400x300/3498db/ffffff?text=Hospital+de+Cancer']),
       10.0,
       1000,
       drawDate1.toISOString(),
@@ -53,7 +53,7 @@ async function seedDatabase() {
     insertRaffle.run(
       'Rifa Beneficente - Cesta de Natal',
       'Concorra a uma super cesta de Natal recheada e ajude uma causa nobre.',
-      JSON.stringify(['/uploads/raffle2.jpg']),
+      JSON.stringify(['https://via.placeholder.com/400x300/e74c3c/ffffff?text=Cesta+de+Natal']),
       5.0,
       500,
       drawDate2.toISOString(),
@@ -67,7 +67,7 @@ async function seedDatabase() {
     insertRaffle.run(
       'Rifa do Bem - Notebook Dell',
       'Concorra a um notebook Dell novinho e contribua para nossa causa.',
-      JSON.stringify(['/uploads/raffle3.jpg']),
+      JSON.stringify(['https://via.placeholder.com/400x300/2ecc71/ffffff?text=Notebook+Dell']),
       20.0,
       300,
       drawDate3.toISOString(),
