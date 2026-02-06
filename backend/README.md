@@ -213,3 +213,36 @@ backend/
 - **cors** - Cross-Origin Resource Sharing
 - **dotenv** - Variáveis de ambiente
 - **multer** - Upload de arquivos
+
+## Segurança
+
+### Recursos de Segurança Implementados
+- ✅ Autenticação JWT
+- ✅ Hash de senhas com bcrypt
+- ✅ CORS configurado
+- ✅ Validação de entrada em endpoints críticos
+- ✅ Prepared statements para prevenir SQL injection
+- ✅ Restrições de unicidade no banco de dados
+
+### Recomendações para Produção
+Para um ambiente de produção, considere adicionar:
+
+1. **Rate Limiting**: Implemente limitação de taxa em endpoints de autenticação e API para prevenir ataques de força bruta
+   ```bash
+   npm install express-rate-limit
+   ```
+
+2. **Variáveis de Ambiente**: 
+   - Nunca commite o arquivo `.env` em produção
+   - Use `.env.example` como referência
+   - Gere um JWT_SECRET único: `openssl rand -base64 32`
+
+3. **HTTPS**: Sempre use HTTPS em produção
+
+4. **Validação e Sanitização**: Adicione bibliotecas como `express-validator` para validação mais robusta
+
+5. **Logging**: Implemente logging de segurança adequado
+
+6. **Backup**: Configure backups regulares do banco de dados
+
+7. **Monitoramento**: Configure alertas para atividades suspeitas

@@ -65,6 +65,24 @@ Para mais informações sobre a API, consulte o [README do Backend](./backend/RE
 - JWT para autenticação
 - bcryptjs para hash de senhas
 
+## ⚠️ Security Considerations
+
+### Current Implementation
+The current implementation includes basic security features:
+- JWT-based authentication
+- Bcrypt password hashing
+- CORS configuration
+- Input validation on critical endpoints
+
+### Recommended Improvements for Production
+For a production deployment, consider adding:
+- **Rate Limiting**: Implement rate limiting on authentication and API endpoints to prevent brute force attacks (e.g., using `express-rate-limit`)
+- **Environment Variables**: Use proper environment variable management (never commit .env to production repos)
+- **HTTPS**: Always use HTTPS in production
+- **Input Sanitization**: Add additional input sanitization and validation
+- **Logging**: Implement proper security logging and monitoring
+- **Database Security**: Use parameterized queries (already implemented) and regular backups
+
 ## 📋 Funcionalidades
 
 ### Implementadas
